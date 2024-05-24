@@ -1,0 +1,27 @@
+{
+  "version": "6",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1716471367080,
+      "tag": "0000_silent_blue_marvel",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1716471372642,
+      "tag": "0001_worried_meggan",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1716535904451,
+      "tag": "0002_slim_legion",
+      "breakpoints": true
+    }
+  ]
+}

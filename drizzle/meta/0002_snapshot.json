@@ -1,0 +1,54 @@
+{
+  "id": "5a4c826f-e936-402d-a179-c206a3f1a0b2",
+  "prevId": "347bc6cf-74c5-40e0-9488-9ce82ee0a289",
+  "version": "6",
+  "dialect": "postgresql",
+  "tables": {
+    "public.orders": {
+      "name": "orders",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "name": {
+          "name": "name",
+          "type": "varchar(256)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "pair": {
+          "name": "pair",
+          "type": "orderpair",
+          "typeSchema": "public",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {
+    "public.orderpair": {
+      "name": "orderpair",
+      "schema": "public",
+      "values": [
+        "sol-btc",
+        "sol-usd",
+        "sol-eth"
+      ]
+    }
+  },
+  "schemas": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

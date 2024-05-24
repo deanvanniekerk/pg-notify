@@ -1,0 +1,35 @@
+{
+  "name": "@ck-subscriber/api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm build:ts",
+    "build:ts": "tsc --build",
+    "start:dev": "node --watch ./dist/server.js",
+    "lint": "pnpm run lint:js && pnpm run lint:types",
+    "lint:js": "biome check ./src",
+    "lint:types": "tsc --noEmit",
+    "lint:fix": "biome check ./src --apply-unsafe"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/ws": "^8.5.10",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@ck-subscriber/db": "workspace:^",
+    "@trpc/server": "^10.45.2",
+    "drizzle-orm": "^0.30.10",
+    "drizzle-zod": "^0.5.1",
+    "express": "^4.19.2",
+    "pg-listen": "^1.7.0",
+    "postgres": "^3.4.4",
+    "ws": "^8.17.0",
+    "zod": "^3.23.8"
+  }
+}

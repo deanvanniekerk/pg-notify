@@ -1,0 +1,76 @@
+**/secrets/*.json
+!**/secrets/*.template.json
+
+node_modules
+.cache
+yarn-error.log
+
+# Generated
+.yarn_install
+ts-node
+oas.json
+/Dockerfile
+.built
+.version
+.version.dephash
+
+# Docker image manifest files
+# pkg/<pkg> images:
+*.image
+*.push
+# Dockerfile.<base> images:
+*.docker-built
+*.docker-pushed
+
+test.eps
+
+# builds
+/dist
+pkg/*/dist
+.dist
+dist
+pkg/pando/graph/**/build
+pkg/pando/src/deployments.json
+
+.DS_Store
+
+# Local env overrides
+.env.development
+
+# Deploy
+deploy/pkg/*.tgz
+deploy/**/.uuid
+
+.vscode/*
+.idea
+asd.*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+!.vscode/aspen.code-snippets
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+!yamb/.yarn
+!yamb/.pnp.cjs
+
+
+# Rust stuff
+/donkey/target
+donkey/Cargo.lock
+
+*.user
+.sentryclirc
+
+**/*.direnv
+
+test/db-dumps
+
+**/.next
+
+postgres

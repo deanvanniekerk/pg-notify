@@ -1,0 +1,28 @@
+{
+  "name": "ck-subscriber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm -r build",
+    "lint": "biome check ./",
+    "fix": "biome check ./ --apply-unsafe",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "drizzle-kit migrate",
+    "db:docker:up": "docker-compose -f postgres/postgres.yml up -d",
+    "db:docker:stop": "docker-compose -f postgres/postgres.yml stop",
+    "db:docker:remove": "docker-compose -f postgres/postgres.yml rm -f && rm -rf postgres/data",
+    "db:docker:logs": "docker-compose -f postgres/postgres.yml logs -t -f",
+    "db:studio": "drizzle-kit studio --port 5555"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "workspaces": [
+    "pkg/**"
+  ],
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "drizzle-kit": "^0.21.4"
+  }
+}
